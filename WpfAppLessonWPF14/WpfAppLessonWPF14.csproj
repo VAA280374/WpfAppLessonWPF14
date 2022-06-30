@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Data\Кофеварка.webp" />
+    <None Remove="Data\Молоко.webp" />
+    <None Remove="Data\Мясо.webp" />
+    <None Remove="Data\сервиз.jpg" />
+    <None Remove="Data\холодильник.webp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Data\Кофеварка.webp" />
+    <Resource Include="Data\Молоко.webp" />
+    <Resource Include="Data\Мясо.webp" />
+    <Resource Include="Data\сервиз.jpg" />
+    <Resource Include="Data\холодильник.webp" />
+  </ItemGroup>
+
+</Project>
