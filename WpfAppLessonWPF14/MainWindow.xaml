@@ -29,7 +29,8 @@
                     <TextBlock Grid.Row="1" Grid.Column="0" Text="Стоимость, руб  "/>
                         <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Path=ProductPrice}"/>
                     <TextBlock Grid.Row="2" Grid.Column="0" Text="Чё такое?  "/>
-                    <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding Path=ProductType, Converter={StaticResource converter}}"/>
+                    <TextBlock Grid.Row="2" Grid.Column="1" 
+                               Text="{Binding Path=ProductType, Converter={StaticResource converter}}"/>
                 </Grid>
             </Border>
             <DataTemplate.Triggers>
