@@ -30,7 +30,7 @@ namespace WpfAppLessonWPF14
                 ProguctName = "Холодильник",
                 ProductPrice = 90000,
                 ProductImage = "Data/холодильник.webp",
-                ProductType = ProductTypes.Appliances
+                ProductType = ProductTypes.Applinces
             });
             products.Add(new Product()
             { 
@@ -51,14 +51,14 @@ namespace WpfAppLessonWPF14
                 ProguctName = "Кофеварка",
                 ProductPrice = 7000,
                 ProductImage = "Data/Кофеварка.webp",
-                ProductType = ProductTypes.Appliances
+                ProductType = ProductTypes.Applinces
             });
             products.Add(new Product()
             { 
                 ProguctName = "Сервиз",
                 ProductPrice = 12000,
                 ProductImage = "Data/сервиз.jpg",
-                ProductType = ProductTypes.Appliances
+                ProductType = ProductTypes.Applinces
             });
             LstBox.ItemsSource = products;
         }

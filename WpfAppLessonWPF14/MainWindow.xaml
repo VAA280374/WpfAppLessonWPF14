@@ -7,8 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Window.Resources>
+        <local:ContexConverter x:Key="converter"/>
         <DataTemplate x:Key="myDataFormat">
-            <Border x:Name="myBorder" BorderBrush="Blue" BorderThickness="1" Margin="5">
+            <Border x:Name="myBorder" BorderBrush="Blue" BorderThickness="5" Margin="5" Border.Background="Red">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
@@ -23,12 +24,12 @@
                     <Image Grid.Row="0" Grid.Column="2" Grid.RowSpan="3"
                            Width="50" Height="50" 
                            Source="{Binding Path=ProductImage}"/>
-                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Название  "/>
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Название"/>
                         <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding Path=ProguctName}"/>
                     <TextBlock Grid.Row="1" Grid.Column="0" Text="Стоимость, руб  "/>
                         <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Path=ProductPrice}"/>
                     <TextBlock Grid.Row="2" Grid.Column="0" Text="Чё такое?  "/>
-                    <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding Path=ProductType}"/>
+                    <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding Path=ProductType, Converter={StaticResource converter}}"/>
                 </Grid>
             </Border>
             <DataTemplate.Triggers>
@@ -37,6 +38,7 @@
                         Food
                     </DataTrigger.Value>
                     <Setter TargetName="myBorder" Property="BorderBrush" Value="Red"/>
+                    <Setter TargetName="myBorder" Property="Border.Background" Value="Blue"/>
                 </DataTrigger> 
             </DataTemplate.Triggers>
         </DataTemplate>

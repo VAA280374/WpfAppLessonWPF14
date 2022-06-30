@@ -9,7 +9,7 @@ namespace WpfAppLessonWPF14
     public enum ProductTypes
     {
         Food,
-        Appliances
+        Applinces
     }
 
     public class Product
